@@ -7,6 +7,7 @@ import FolderIcon from '../assets/images/folder.svg';
 import styles from "./FileExplorer.module.css";
 
 function FileExplorer({ files = [] }) {
+
   return (
     <div className={styles.FileExplorer}>
       {files.length === 0 &&

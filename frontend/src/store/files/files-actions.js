@@ -25,7 +25,7 @@ export const refreshFiles = () => {
       console.log("here ppp");
       dispatch(recieveFileStart())
 
-      const files = await fetch('http://cors-anywhere.herokuapp.com/https://filemanager-lilpolymath.cloud.okteto.net/api/files')
+      const files = await fetch('https://filemanager-lilpolymath.cloud.okteto.net/api/files')
       dispatch(receiveFilesComplete(files.results))
 
     } catch (err) {

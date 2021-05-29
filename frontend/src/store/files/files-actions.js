@@ -1,6 +1,3 @@
-import data from '../../../../api/data/files.json'
-
-
 export const receiveFilesComplete = files => {
   return {
     type: 'files/receiveFiles',

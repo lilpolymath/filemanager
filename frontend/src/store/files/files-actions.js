@@ -26,7 +26,7 @@ export const refreshFiles = () => {
       dispatch(recieveFileStart())
 
       const files = await fetch('https://filemanager-lilpolymath.cloud.okteto.net/api/files')
-      dispatch(receiveFilesComplete(files.results))
+      dispatch(receiveFilesComplete(files))
 
     } catch (err) {
       dispatch(recieveFileError(err.message))

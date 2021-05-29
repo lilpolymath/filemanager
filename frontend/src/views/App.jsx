@@ -18,7 +18,7 @@ function App() {
     dispatch(refreshFiles());
   }, POLL_INTERVAL, true);
 
-  const { list } = useSelector(store => store.files);
+  const { list, hasError, isLoading } = useSelector(store => store.files.file);
   const { selectedFile } = useSelector(store => store.filemanager);
 
   return (

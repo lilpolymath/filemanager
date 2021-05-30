@@ -10,7 +10,6 @@ export const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'files/receiveFiles':
-      console.log("suceess");
       return {
         ...state,
         file: {
@@ -21,7 +20,6 @@ export default (state = initialState, action) => {
         }
       };
     case 'files/receiveFiles-err':
-      console.log("err");
       return {
         ...state,
         file: {
@@ -31,7 +29,6 @@ export default (state = initialState, action) => {
         }
       };
     case 'files/receiveFiles-start':
-      console.log("start");
       return {
         ...state,
         file: {

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <FileExplorer files={list} />
+      <FileExplorer files={list}  />
       <FileContent file={selectedFile} />
     </div>
   );

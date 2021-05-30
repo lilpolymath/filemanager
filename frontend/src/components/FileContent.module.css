@@ -1,2 +1,5 @@
 .FileContent {
+    padding: 18px;
+    background-color: #191919;
+    overflow: auto;
 }

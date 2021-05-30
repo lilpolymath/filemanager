@@ -1,3 +1,5 @@
+import arrayToTree from '../../utils/arrayToTree'
+
 export const receiveFilesComplete = files => {
   return {
     type: 'files/receiveFiles',
@@ -22,13 +24,13 @@ export const refreshFiles = () => {
 
   return async dispatch => {
     try {
-      console.log("here ppp");
       dispatch(recieveFileStart())
 
       const response = await fetch('https://filemanager-lilpolymath.cloud.okteto.net/api/files')
       const files = await response.json()
-      console.log(files);
-      dispatch(receiveFilesComplete(files))
+      const fileTree = arrayToTree(files)
+
+      dispatch(receiveFilesComplete(fileTree))
 
     } catch (err) {
       dispatch(recieveFileError(err.message))

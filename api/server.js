@@ -1,9 +1,7 @@
 const express = require("express");
 const mongo = require("mongodb").MongoClient;
-const cors = require('cors')
 
 const app = express();
-app.use(cors())
 
 const url = `mongodb://${process.env.MONGODB_USERNAME}:${encodeURIComponent(process.env.MONGODB_PASSWORD)}@${process.env.MONGODB_HOST}:27017/${process.env.MONGODB_DATABASE}`;
 

@@ -30,7 +30,7 @@ const RenderFile = ({ file, index, onFileClick }) => {
           {file.name}
         </div>
         {file.kind === 'file' && <div className={styles.FileExplorerSize}>
-          {file.size} kb
+          {file.size} kB
       </div>}
       </div>
 

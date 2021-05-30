@@ -5,7 +5,6 @@ import { useInterval } from 'use-interval';
 import FileExplorer from '../components/FileExplorer';
 import FileContent from '../components/FileContent';
 import { refreshFiles } from '../store/files/files-actions';
-import { selectFile } from '../store/filemanager/filemanager-actions';
 
 import styles from "./App.module.css";
 

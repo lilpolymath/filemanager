@@ -1,14 +1,24 @@
 .App {
+  height: 100%;
+  flex: 1 auto;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 300px 1fr;
+}
+
+.Error {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppContainer {
   --app-background-color: #1c1c1c;
   --app-horizontal-margin: 65px;
   --app-normal-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-  background: var(--app-background-color);
+  height: 100%;
   color: #ffffff;
   font-family: var(--app-normal-font);
-  display: grid;
-  flex: 1 auto;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 1fr;
-  height: 100%;
+  background: var(--app-background-color);
 }

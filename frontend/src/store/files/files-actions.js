@@ -25,8 +25,8 @@ export const refreshFiles = () => {
       console.log("here ppp");
       dispatch(recieveFileStart())
 
-      const files = await fetch('https://filemanager-lilpolymath.cloud.okteto.net/api/files')
-      console.log(files);
+      const response = await fetch('https://filemanager-lilpolymath.cloud.okteto.net/api/files')
+      const files = response.json()
       dispatch(receiveFilesComplete(files))
 
     } catch (err) {

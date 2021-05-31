@@ -1,21 +1,22 @@
 import arrayToTree from '../../utils/arrayToTree'
+import * as types from '../constants'
 
 export const receiveFilesComplete = files => {
   return {
-    type: 'files/receiveFiles',
+    type: types.RECIEVE_FILES,
     files
   };
 };
 
 export const recieveFileStart = () => {
   return {
-    type: 'files/receiveFiles-start',
+    type: types.RECIEVE_FILES_START,
   };
 }
 
 export const recieveFileError = (message) => {
   return {
-    type: 'files/receiveFiles-err',
+    type: types.RECIEVE_FILES_ERR,
     error: message
   };
 }

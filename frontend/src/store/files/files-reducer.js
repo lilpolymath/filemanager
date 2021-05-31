@@ -1,3 +1,5 @@
+import * as types from '../constants'
+
 export const initialState = {
   loaded: false,
   file: {
@@ -9,7 +11,7 @@ export const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'files/receiveFiles':
+    case types.RECIEVE_FILES:
       return {
         ...state,
         file: {
@@ -19,7 +21,7 @@ export default (state = initialState, action) => {
           list: action.files ?? []
         }
       };
-    case 'files/receiveFiles-err':
+    case types.RECIEVE_FILES_ERR:
       return {
         ...state,
         file: {
@@ -28,7 +30,7 @@ export default (state = initialState, action) => {
           isLoading: false
         }
       };
-    case 'files/receiveFiles-start':
+    case types.RECIEVE_FILES_START:
       return {
         ...state,
         file: {

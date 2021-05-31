@@ -1,3 +1,4 @@
+import * as types from '../constants'
 
 export const initialState = {
   selectedFile: null
@@ -5,7 +6,7 @@ export const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'filemanager/selectFile': {
+    case types.SELECT_FILE: {
       return {
         ...state,
         selectedFile: action.file ?? initialState.selectedFile

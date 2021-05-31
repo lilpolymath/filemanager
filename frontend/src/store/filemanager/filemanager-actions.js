@@ -1,6 +1,8 @@
+import * as types from '../constants'
+
 export const selectFile = file => {
   return {
-    type: 'filemanager/selectFile',
+    type: types.SELECT_FILE,
     file
   };
 };

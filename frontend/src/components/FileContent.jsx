@@ -5,11 +5,11 @@ import styles from "./FileContent.module.css";
 
 function FileContent({ file = null }) {
   return (
-    <div className={styles.FileContent}>
+    <section className={styles.FileContent}>
       <pre>
         {file?.content && atob(file.content)}
       </pre>
-    </div>
+    </section>
   );
 }
 

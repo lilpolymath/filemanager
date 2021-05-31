@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '../utils/test-utils';
 
 import FileContent from './FileContent';
 

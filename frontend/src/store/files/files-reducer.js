@@ -1,7 +1,6 @@
 import * as types from '../constants'
 
 export const initialState = {
-  loaded: false,
   file: {
     list: [],
     hasError: null,

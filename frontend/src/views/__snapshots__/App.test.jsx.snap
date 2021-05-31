@@ -2,21 +2,25 @@
 
 exports[`App Component should render defaults 1`] = `
 <div
-  class="App"
+  class="AppContainer"
 >
   <div
-    class="FileExplorer"
+    class="App"
   >
-    <div
-      class="FileExplorerEmpty"
+    <section
+      class="FileExplorer"
     >
-      The root folder is empty.
-    </div>
-  </div>
-  <div
-    class="FileContent"
-  >
-    <pre />
+      <div
+        class="FileExplorerEmpty"
+      >
+        The root folder is empty.
+      </div>
+    </section>
+    <section
+      class="FileContent"
+    >
+      <pre />
+    </section>
   </div>
 </div>
 `;

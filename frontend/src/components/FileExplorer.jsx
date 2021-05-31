@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -34,8 +34,8 @@ const RenderFile = ({ file, index, onFileClick }) => {
       </div>}
       </div>
 
-      {file.children.length !== 0 && <div className={styles.FileExplorerChild}>
-        {file?.children.map(child => (
+      {file?.children?.length !== 0 && <div className={styles.FileExplorerChild}>
+        {file?.children?.map(child => (
           <RenderFile key={child.id} onFileClick={onFileClick} index={index + 1} file={child} />))}
       </div>}
     </div>
@@ -51,7 +51,7 @@ export const FileExplorer = ({ files = [] }) => {
   }
 
   return (
-    <div className={styles.FileExplorer}>
+    <section className={styles.FileExplorer}>
       {files.length === 0 ?
         <div className={styles.FileExplorerEmpty}>
           The root folder is empty.
@@ -60,7 +60,7 @@ export const FileExplorer = ({ files = [] }) => {
         files.map(file => (
           <RenderFile onFileClick={onFileClick} key={file.id} index={0} file={file} />))
       }
-    </div>
+    </section>
   );
 }
 

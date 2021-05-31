@@ -10,8 +10,10 @@ describe('App Component', () => {
   it('should render defaults', () => {
     const initialState = {
       files: {
-        list: [],
-        loaded: true
+        file: {
+          list: [],
+          isLoading: true
+        }
       },
       filemanager: {
         selectedFile: null

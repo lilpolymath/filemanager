@@ -31,7 +31,7 @@ export const refreshFiles = () => {
       const files = await response.json()
       const fileTree = arrayToTree(files)
 
-      dispatch(receiveFilesComplete(fileTree))
+      dispatch(receiveFilesComplete([]))
 
     } catch (err) {
       dispatch(recieveFileError(err.message))
